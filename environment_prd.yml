@@ -1,7 +1,7 @@
 BOT_NAME: 'Unknown'
 HOOK_CHANNEL: 'Cxxxxxxxx' # https://api.slack.com/methods/channels.list/test
 HOOK_KEYWORD: 'poop'
-FNC_REACT: 'SlackReactionBot-dev-fnc'
-FNC_REPLY: 'SlackReplyBot-dev-fnc'
-FNC_ANONY: 'SlackAnonymousChannel-dev-fnc'
+FNC_REACT: 'SlackReactionBot-prd-fnc'
+FNC_REPLY: 'SlackReplyBot-prd-fnc'
+FNC_ANONY: 'SlackAnonymousChannel-prd-fnc'
 HOOK_REACTIONS: 'one,two,three,four,five,heart' #separate with comma
