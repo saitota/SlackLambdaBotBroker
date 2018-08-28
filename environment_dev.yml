@@ -1,7 +1,10 @@
 BOT_NAME: 'Unknown'
-HOOK_CHANNEL: 'Cxxxxxxxx' # https://api.slack.com/methods/channels.list/test
+HOOK_CHANNEL: 'C9FSH18AF' # https://api.slack.com/methods/channels.list/test
 HOOK_KEYWORD: 'poop'
 FNC_REACT: 'SlackReactionBot-dev-fnc'
 FNC_REPLY: 'SlackReplyBot-dev-fnc'
 FNC_ANONY: 'SlackAnonymousChannel-dev-fnc'
 HOOK_REACTIONS: 'one,two,three,four,five,heart' #separate with comma
+HOOK_CHANNEL_FGO: 'CCNQFMUR1,CCNQFMUR1' # fgo_test,fgo_test
+HOOK_KEYWORD_FGO: 'HOGE,FUGA'
+FNC_FGO: 'FgoBot-dev-fnc'
