@@ -49,6 +49,9 @@ def handler(event, context):
     FNC_REACT = os.environ['FNC_REACT']
     FNC_REPLY = os.environ['FNC_REPLY']
     FNC_ANONY = os.environ['FNC_ANONY']
+    HOOK_CHANNEL_FGO = os.environ['HOOK_CHANNEL_FGO']
+    HOOK_KEYWORD_FGO = os.environ['HOOK_KEYWORD_FGO']
+    FNC_FGO = os.environ['FNC_FGO']
 
     # Output the received event to the log
     logging.info(json.dumps(event))
@@ -75,6 +78,11 @@ def handler(event, context):
     if body.get('event').get('reaction') in emojis:
         logger.info('hit: %s', body.get('event').get('reaction'))
         invoke_function(FNC_REACT, body)
+
+    # FgoBot
+    if body.get('event').get('channel', '') in HOOK_CHANNEL_FGO.split(',') and body.get('event').get('text', '') in HOOK_KEYWORD_FGO.split(','):
+        invoke_function(FNC_FGO, body)
+
 
     # exit always normally
     return {'statusCode': 200, 'body': 'quit'}
